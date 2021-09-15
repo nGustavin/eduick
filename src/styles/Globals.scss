@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+:root{
+  --white: #FFFFFF;
+
+  --gray-100: #E5E5E5;
+  --gray-200: #CFC9E9;
+  --gray-800: #343434;
+
+  --purple-200: #A68EEF;
+  --purple-300: #7A57FD;
+  --purple-400: #7955E8; 
+  --purple-500: #6F48EC;
+  --purple-550: #6A40E4;
+  --purple-600: #6135D7;
+  --purple-800: #200E64;
+
+  --yellow-100: #FFEAA4;
+  --yellow-500: #FFD74F;
+}
+
+
+
+@media(max-width: 1080px) {
+  html{
+    font-size: 93.75%;
+  }
+}
+
+@media(max-width: 720px) {
+  html{
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: var(--gray-100);
+  color: var(--gray-800);
+}
+
+body, input, textarea, select, button{
+  font: 400 1rem "Open Sans", sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.react-modal-overlay{
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-modal-content{
+  width: 100%;
+  max-width: 576px;
+  background: var(--purple-550);
+  padding: 3rem;
+  position: relative;
+  border-radius: 0.25rem;
+}
+
+.react-modal-close{
+  position: absolute;
+  right: -1.5rem;
+  top: -1.5rem;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: var(--purple-800);
+  transition: filter 0.2s;
+  &:hover{
+    filter: brightness(0.8)
+  }
+}

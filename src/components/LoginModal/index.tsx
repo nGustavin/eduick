@@ -1,0 +1,77 @@
+import React, { useState } from 'react';
+import Modal from 'react-modal'
+import {IoMdClose} from 'react-icons/io'
+import DefaultButton from '../DefaultButton';
+import styles from './styles.module.scss'
+import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
+
+type LoginModalProps = {
+  isOpen: boolean;
+  onRequestClose: () => void
+}
+
+const LoginModal: React.FC<LoginModalProps> = ({isOpen, onRequestClose}) => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [passwordIsVisible, setPasswordIsVisible] = useState(false)
+
+  return(
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onRequestClose}
+      overlayClassName="react-modal-overlay"
+      className="react-modal-content"
+    >
+      <button type='button' onClick={onRequestClose} className="react-modal-close">
+        <IoMdClose size={24} color="var(--white)"/>
+      </button>
+      <main className={styles.modalContent}>
+        <h1>
+          Get Started <br/>
+          <span>JUST LOGIN</span>
+        </h1>
+
+      <form>
+        <div>
+          <label htmlFor="username"> Username: </label>
+          <input 
+            type="text" 
+            id="username"
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="password"> Password: </label>
+          <div className={styles.inputWithIcon}>
+            <input 
+              type={passwordIsVisible ? 'text': 'password'} 
+              id="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+            />
+            {passwordIsVisible ? (
+              <AiOutlineEye 
+                size={24} 
+                color="rgba(255, 255, 255, 1)"
+                onClick={() => setPasswordIsVisible(false)}
+              />
+            ):(
+              <AiOutlineEyeInvisible 
+                size={24} 
+                color="rgba(255, 255, 255, 1)"
+                onClick={() => setPasswordIsVisible(true)}
+              />
+            )}
+          </div>
+        </div>
+          <DefaultButton
+            value="LOGIN"
+          />
+      </form>
+      </main>
+    </Modal>
+  );
+}
+
+export {LoginModal};

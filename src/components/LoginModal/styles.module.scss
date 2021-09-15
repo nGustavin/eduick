@@ -1,0 +1,88 @@
+.modalContent{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+
+  >h1{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.06em;
+    color: var(--white);
+
+    >span{
+      font-family: 'Poppins', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 2.3rem;
+      letter-spacing: -0.02em;
+      color: var(--yellow-100);
+    }
+  }
+
+  >form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    >div{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+
+      >label{
+        font-size: 1rem;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 2rem;
+        color: var(--white);
+      }
+
+      >input{
+        height: 3.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 0.25rem;
+        color: var(--white);
+        padding: 0 1rem 0;
+      }
+
+      >.inputWithIcon{
+        height: 3.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 0.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 1rem;
+        >*{
+          outline: none;
+        }
+        
+
+        >input{
+          background: transparent;
+          width: 90%;
+          height: 100%;
+          border: none;
+          color: var(--white);
+          padding: 0 1rem 0;
+        }
+      }
+    }
+
+    >button{
+      width: 50%;
+      align-self: flex-end; 
+      height: 3.5rem;
+    }
+  }
+}
