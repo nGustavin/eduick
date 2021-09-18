@@ -65,6 +65,7 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 15;
 }
 
 .react-modal-content{
@@ -74,6 +75,12 @@ a{
   padding: 3rem;
   position: relative;
   border-radius: 0.25rem;
+  z-index: 15;
+
+  @media(max-width: 720px){
+    height: 100vh;
+    width: 100vw;
+  }
 }
 
 .react-modal-close{
@@ -91,5 +98,11 @@ a{
   transition: filter 0.2s;
   &:hover{
     filter: brightness(0.8)
+  }
+
+  @media(max-width: 720px){
+    top: 2.5rem;
+    right: 2rem;
+    background: transparent;
   }
 }

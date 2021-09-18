@@ -22,6 +22,7 @@ const Home: React.FC = () => {
     setIsLoginModalOpen(true)
   }
 
+
   return (
     <>
       <LoginModal
@@ -77,6 +78,9 @@ const Home: React.FC = () => {
             </div>
             <DefaultButton
               value="SEARCH"
+              style={{
+                gridArea: 'SEARCH'
+              }}
             />
           </form>
         </div>

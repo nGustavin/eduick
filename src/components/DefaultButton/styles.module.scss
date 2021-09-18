@@ -11,6 +11,7 @@
   transition: filter 0.2s;
 
   box-shadow: 1px 3px 11px -3px rgba(255, 231, 150, 0.45);
+  
 
   &:hover{
     filter: brightness(0.95);
@@ -19,4 +20,6 @@
   &.shadow{
     box-shadow: none;
   }
+
+  
 }
