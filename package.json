@@ -6,15 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "json-server server.json -p 3333"
   },
   "dependencies": {
+    "axios": "^0.21.4",
+    "json-server": "^0.16.3",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-modal": "^3.14.3",
-    "sass": "^1.35.2"
+    "react-toastify": "^8.0.2",
+    "sass": "^1.35.2",
+    "simple-rating-stars": "^1.6.0"
   },
   "devDependencies": {
     "@types/node": "^16.0.1",

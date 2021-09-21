@@ -1,0 +1,102 @@
+.layoutContainer{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 5rem;
+    padding: 7rem var(--horizontal-padding) 0;
+    background: var(--gray-100);
+
+    overflow-x: hidden;
+
+    @media (max-width: 768px) {
+        padding: 7rem 5rem 0;
+    }
+
+    @media (max-width: 468px) {
+        padding: 7rem 2rem 0;
+    }
+}
+
+.openingCard{
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+    padding: 0 12rem 0rem 0;
+    max-height: 18rem;
+    overflow: visible;
+    height: 100%;
+
+    >main{
+        margin-right: auto;
+
+        >h1{
+            color: var(--purple-800);
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            line-height: 2rem;
+            margin-bottom: 1rem;
+            margin-top: -5rem;
+
+            >span{
+                color: var(--purple-800);
+                font-size: 1.5rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+            }
+
+            >strong{
+                color: var(--yellow-500);
+                font-size: 1.5rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+            }
+        }
+
+        >p{
+            color: var(--gray-800);
+        }
+    }
+
+    > div:last-of-type{
+        height: 100%;
+        width: 28%;
+        
+        >*{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    >.detailImage{
+        margin-left: -4rem;
+        height: 12rem;
+        width: 12rem;
+        margin-bottom: 2rem;
+
+        >*{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 24rem;
+    margin-top: 3rem;
+    grid-gap: 3rem;
+
+    @media (max-width: 1324px) {
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 27rem;
+    }
+}

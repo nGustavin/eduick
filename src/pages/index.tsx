@@ -2,11 +2,13 @@ import Head from 'next/head'
 import DefaultButton from '../components/DefaultButton'
 import {DefaultHeader} from '../components/Header/Default'
 import {RiCheckboxCircleFill} from 'react-icons/ri'
+import Image from 'next/image'
 
 import styles from './home.module.scss'
 import { useState } from 'react'
 import Modal from 'react-modal'
 import { LoginModal } from '../components/LoginModal'
+import Detail from '../../public/images/image-detail.svg'
 
 Modal.setAppElement('#root')
 
@@ -38,7 +40,7 @@ const Home: React.FC = () => {
         />
         <div>
         <aside> 
-          <img src="/images/image-detail.svg"/>
+          <Image src={Detail} alt="Girl studying Illustration"/>
         </aside>
         <div className={styles.contentContainer}>
           <h1>
@@ -64,7 +66,7 @@ const Home: React.FC = () => {
                 i'm a teacher
               </button>
               <button 
-                className={activeOption === 'student' && styles.active}
+                className={activeOption === 'student' ? styles.active : null}
                 type="button"
                 onClick={() => {setActiveOption('student')}}
               >

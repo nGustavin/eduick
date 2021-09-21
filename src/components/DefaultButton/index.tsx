@@ -13,7 +13,7 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({value, shadow, linkTo, ...
     linkTo ? (
       <h1>alo</h1>
     ) : (
-      <button {...rest} type="button" className={`${styles.defaultButton} ${!shadow && styles.shadow}`}>
+      <button {...rest} type="button" className={`${styles.defaultButton} ${!shadow ? styles.shadow : null}`}>
       {value} 
     </button>
     )

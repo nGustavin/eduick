@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import Modal from 'react-modal'
 import {IoMdClose} from 'react-icons/io'
 import DefaultButton from '../DefaultButton';
 import styles from './styles.module.scss'
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
+import {useRouter} from 'next/router'
+import {ToastContainer, toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 type LoginModalProps = {
   isOpen: boolean;
@@ -14,6 +17,25 @@ const LoginModal: React.FC<LoginModalProps> = ({isOpen, onRequestClose}) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [passwordIsVisible, setPasswordIsVisible] = useState(false)
+
+  const router = useRouter()
+
+  const handleLogin = (e: FormEvent) => {
+    e.preventDefault()
+    if(!username || !password){
+      toast("Username and password are required fields", {
+        type: "error"
+      })
+      return
+    }
+
+    const data = {
+      username,
+    }
+
+    localStorage.setItem("UserInfo", JSON.stringify(data))
+    router.push('auth/dashboard')
+  }
 
   return(
     <Modal
@@ -67,9 +89,11 @@ const LoginModal: React.FC<LoginModalProps> = ({isOpen, onRequestClose}) => {
         </div>
           <DefaultButton
             value="LOGIN"
+            onClick={handleLogin}
           />
       </form>
       </main>
+      <ToastContainer />
     </Modal>
   );
 }

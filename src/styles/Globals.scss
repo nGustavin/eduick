@@ -5,10 +5,13 @@
 }
 
 :root{
+  --horizontal-padding: 10rem;
   --white: #FFFFFF;
 
-  --gray-100: #E5E5E5;
+  
+  --gray-100: #F1F5F7;
   --gray-200: #CFC9E9;
+  --gray-250: #C4C4C4;
   --gray-800: #343434;
 
   --purple-200: #A68EEF;
@@ -17,10 +20,12 @@
   --purple-500: #6F48EC;
   --purple-550: #6A40E4;
   --purple-600: #6135D7;
+  --purple-650: #5f41cf;
   --purple-800: #200E64;
 
   --yellow-100: #FFEAA4;
-  --yellow-500: #FFD74F;
+  --yellow-400: #FFD74F;
+  --yellow-500: #FFC908;
 }
 
 
