@@ -1,8 +1,7 @@
-import { memo } from 'react'
-import styles from './styles.module.scss'
-import CourseImage from '../../../public/images/course-image.jpg'
-import Image from 'next/image'
+import Image from 'next/image';
 import Stars from 'simple-rating-stars';
+import CourseImage from '../../../public/images/course-image.jpg';
+import styles from './styles.module.scss';
 
 type CourseCardProps = {
     rating: number

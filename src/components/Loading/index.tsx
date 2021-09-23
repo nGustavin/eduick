@@ -1,4 +1,4 @@
-import { useLoading, ThreeDots } from "@agney/react-loading"
+import { ThreeDots, useLoading } from "@agney/react-loading"
 import styles from './styles.module.scss'
 
 type LoaderComponentProps = {

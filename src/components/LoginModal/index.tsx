@@ -1,12 +1,12 @@
+import { useRouter } from 'next/router';
 import React, { FormEvent, useState } from 'react';
-import Modal from 'react-modal'
-import {IoMdClose} from 'react-icons/io'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import { IoMdClose } from 'react-icons/io';
+import Modal from 'react-modal';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import DefaultButton from '../DefaultButton';
-import styles from './styles.module.scss'
-import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
-import {useRouter} from 'next/router'
-import {ToastContainer, toast} from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import styles from './styles.module.scss';
 
 type LoginModalProps = {
   isOpen: boolean;
@@ -98,4 +98,4 @@ const LoginModal: React.FC<LoginModalProps> = ({isOpen, onRequestClose}) => {
   );
 }
 
-export {LoginModal};
+export { LoginModal };

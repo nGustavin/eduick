@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import {LoggedHeader} from '../../components/Header/Logged'
 import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
 import Detail from '../../../public/images/details.svg'
 import People from '../../../public/images/people.svg'
-
-import styles from './styles.module.scss'
 import { CourseCard } from '../../components/CourseCard'
-import { api } from '../../services/api'
-import {useLoading, ThreeDots} from '@agney/react-loading'
 import { Footer } from '../../components/Footer'
+import { LoggedHeader } from '../../components/Header/Logged'
 import { Loader } from '../../components/Loading'
+import { api } from '../../services/api'
+import styles from './styles.module.scss'
+
 
 type Courses = {
     id: string;

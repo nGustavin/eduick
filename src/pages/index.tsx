@@ -1,14 +1,14 @@
 import Head from 'next/head'
-import DefaultButton from '../components/DefaultButton'
-import {DefaultHeader} from '../components/Header/Default'
-import {RiCheckboxCircleFill} from 'react-icons/ri'
 import Image from 'next/image'
-
-import styles from './home.module.scss'
 import { useState } from 'react'
+import { RiCheckboxCircleFill } from 'react-icons/ri'
 import Modal from 'react-modal'
-import { LoginModal } from '../components/LoginModal'
 import Detail from '../../public/images/image-detail.svg'
+import DefaultButton from '../components/DefaultButton'
+import { DefaultHeader } from '../components/Header/Default'
+import { LoginModal } from '../components/LoginModal'
+import styles from './home.module.scss'
+
 
 Modal.setAppElement('#root')
 

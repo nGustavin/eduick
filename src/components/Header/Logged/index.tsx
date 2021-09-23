@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
+import { BsArrowRight } from 'react-icons/bs';
 import { RiArrowDownSLine } from 'react-icons/ri';
-import {BsArrowRight} from 'react-icons/bs'
 import Avatar from '../../../../public/images/avatar.png';
 import HeaderDetail from '../../../../public/images/header-detail.svg';
 import Logo from '../../../../public/images/logo.svg';
