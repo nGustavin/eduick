@@ -52,7 +52,6 @@ const Dashboard: React.FC<Courses> = () => {
                 setIsLoading(() => false)
             }
         }, {
-            // root: document.querySelector('#intersection'),
             rootMargin: '60px',
         })
 
