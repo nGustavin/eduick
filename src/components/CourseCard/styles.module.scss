@@ -41,9 +41,14 @@
     >h1{
         color: var(--purple-800);
         font-family: 'Poppins', sans-serif;
+        
         font-weight: 600;
         font-size: 1.5rem;
-        margin-bottom: 1rem;
+        overflow: hidden;
         text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        
     }
 }

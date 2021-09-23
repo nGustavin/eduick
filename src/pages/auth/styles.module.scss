@@ -62,7 +62,8 @@
 
     > div:last-of-type{
         height: 100%;
-        width: 28%;
+        // background: red;
+        width: auto;
         
         >*{
             width: 100%;
@@ -85,19 +86,60 @@
 
 .gridContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 24rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-auto-rows: 26rem;
     margin-top: 3rem;
-    grid-gap: 3rem;
-
-    @media (max-width: 1324px) {
-        grid-template-columns: 1fr 1fr;
-        
-    }
-
-    @media (max-width: 968px) {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 27rem;
-    }
+    grid-gap: 2rem;
 }
 
+
+
+@media(max-width: 1024px){
+    .openingCard{
+        padding: 0 0 0 2rem;
+        border-radius: 0.25rem;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+
+        >main{
+            width: 18rem;
+            margin-right: 0;
+            >h1{
+                font-size: 2rem;
+
+            line-height: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 0;
+
+                >span{
+                    font-size: 2rem;
+                }
+            }
+
+            >p{
+                font-size: 1.2rem;
+
+                >br{
+                    display: none;
+                }
+            }
+        }
+
+        >div:last-of-type{
+            display: none;
+        }
+    }
+
+    .detailImage{
+        margin-top: -6rem;
+        width: 10rem;
+        height: 10rem;
+
+        // background: red;
+        img{
+            min-width: 0;
+            width: 2rem;
+        }
+    }
+}
