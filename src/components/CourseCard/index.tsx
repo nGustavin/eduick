@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import styles from './styles.module.scss'
 import CourseImage from '../../../public/images/course-image.jpg'
 import Image from 'next/image'
@@ -21,11 +22,11 @@ export const CourseCard: React.FC<CourseCardProps> = ({
             </header>
             <div>
                 <Stars 
-                    stars={rating}
+                    stars={rating ? rating : 0}
                     outOf={5}
                     empty={'rgba(196, 196, 196, 0.4)'}
                     full={'var(--yellow-500)'}
-                    stroke={''}
+                    stroke={'none'}
                 />
                 <button>
                     {lessons} LESSONS
