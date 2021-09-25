@@ -1,19 +1,32 @@
-<h1 align="center"> Nextjs Template </h1>
-<h4 align="center"> With SASS and Typescript </h4>
+## Installation
 
-## Usage
-#### To use this template you have to install  <a href="https://github.com/Rich-Harris/degit"> degit <a/>.
+To run the project is needed yarn or npm and git.
 
-#### With degit you can duplicate this repo with a name of your choice, using the following sintax: <br/> 
- 
-```bash 
-degit https://github.com/nGustavin/nextjs-template [YOUR_PROJECT_NAME]
-```
-
-#### The last step is install the dependencies with yarn or npm, just run one of this following commands inside the project folder:
-
+#### 1 - Clone the repository folder
 ```bash
-npm install 
-
-yarn install
+  git clone https://github.com/ngustavin/eduick.git
 ```
+
+#### 2 - Install dependencies
+```bash
+  yarn
+  #If you are using npm, you can run 'npm install
+```
+
+#### 3 - Start json server with yarn or npm
+```bash
+  yarn server
+  # npm server
+```
+
+#### 4 - With json server running, you can start the development server
+```bash
+  yarn dev
+  # npm run dev
+```
+
+##### Now just access the 3000 port in your browser
+    
+## Author
+
+[Gustavo Fernandes](https://github.com/ngustavin)
