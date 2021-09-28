@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Stars from 'simple-rating-stars';
-import CourseImage from '../../../public/images/course-image.jpg';
+import CourseImage from '../../assets/dashboard/course-image.jpg';
 import styles from './styles.module.scss';
 
 type CourseCardProps = {

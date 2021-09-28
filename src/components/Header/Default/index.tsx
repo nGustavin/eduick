@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { FiX } from 'react-icons/fi';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
-import Logo from '../../../../public/images/logo.svg';
+import Logo from '/public/logo.svg';
 import DefaultButton from '../../DefaultButton';
 import styles from './styles.module.scss';
 
